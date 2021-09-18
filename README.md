@@ -1,1 +1,1 @@
-## BoilerPlate For NEXTJS APP
+## UI Company Profile

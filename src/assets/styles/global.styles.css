@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/fonts/helvetica/helvetica-light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/helvetica/Helvetica.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/helvetica/Helvetica-Oblique.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/fonts/helvetica/Helvetica-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: italic;
+  font-weight: 800;
+  src: url('/fonts/helvetica/Helvetica-BoldOblique') format('truetype');
+}
+
+body {
+  font-family: Helvetica;
+}

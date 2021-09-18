@@ -19,15 +19,20 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "src/*": ["./src/*"],
-      "public/*": ["./public/*"]
+      "src/*": [
+        "./src/*"
+      ],
+      "public/*": [
+        "./public/*"
+      ]
     }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-  ],
+    "**/*.tsx",
+    "src/theme/color.theme.js"
+, "src/config/path.config.js"  ],
   "exclude": [
     "node_modules"
   ]

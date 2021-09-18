@@ -1,0 +1,16 @@
+export default {
+  title: 'Company Profile',
+  titleForFB: 'Company Profile',
+  titleForTwitter: 'Company Profile',
+  metaDescription: 'A web for company profile',
+  metaDescriptionFB: 'A web for company profile',
+  metaDescriptionTwitter: 'A web for company profile',
+  metaKeywords: 'A web for company profile',
+  domain: 'localhost',
+  facebookURL: 'facebook.com',
+  twitterURL: 'twitter.com',
+  faviconImage: '/favicon.svg',
+  iconForFB: '/favicon.svg',
+  iconForTwitter: '/favicon.svg',
+  defaultLang: 'en',
+};
