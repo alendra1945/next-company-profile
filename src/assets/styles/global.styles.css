@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --defaultFont: Helvetica;
+  --xs-screen: 480px;
+  --sm-screen: 640px;
+  --md-screen: 768px;
+  --lg-screen: 1024px;
+  --xl-screen: 1280px;
+  --xl2-screen: 1536px;
+}
 @font-face {
   font-family: 'Helvetica';
   font-style: normal;
@@ -38,5 +47,5 @@
 }
 
 body {
-  font-family: Helvetica;
+  font-family: var(--defaultFont);
 }

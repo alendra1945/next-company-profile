@@ -22,7 +22,7 @@ module.exports = {
     ];
   },
   env: {
-    ENV_TYPE: NODE_ENV,
+    NODE_ENV: NODE_ENV,
     PORT,
   },
 };
