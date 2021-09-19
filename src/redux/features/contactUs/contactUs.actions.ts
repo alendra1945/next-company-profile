@@ -6,7 +6,11 @@ import { DispatchType } from 'src/redux';
 const CREATE_CONTACT_MESSAGE = 'CREATE_CONTACT_MESSAGE';
 export const createContactMessage = createAsyncAction(
   CREATE_CONTACT_MESSAGE,
-  (data: MessageDataInterface | {} = {}) =>
+  (
+      data: MessageDataInterface | {} = {},
+      onSuccess: () => {},
+      onFailure: () => {}
+    ) =>
     async (dispatch: DispatchType) => {
       return await apiRequest({
         dispatch,
@@ -14,6 +18,8 @@ export const createContactMessage = createAsyncAction(
         method: 'POST',
         url: ENDPOINTS.CREATE_CONTACT_MESSAGE,
         data: data,
+        onSuccess,
+        onFailure,
       });
     }
 );

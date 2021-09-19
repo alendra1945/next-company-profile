@@ -8,8 +8,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import Ripple from 'material-ripple-effects';
 import { createContactMessage } from 'src/redux/features/contactUs';
 import Head from 'next/head';
-import { useEffect } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { showToastError, showToastSuccess } from 'src/layout/Default.layout';
 
 const ContactScreen = () => {
   const rippleEffect = new Ripple();
@@ -27,6 +27,7 @@ const ContactScreen = () => {
     getValues,
     trigger,
     clearErrors,
+    reset,
     formState: { errors },
   } = useForm<Yup.TypeOf<typeof schema>>({
     mode: 'onChange',
@@ -50,6 +51,22 @@ const ContactScreen = () => {
       });
       return;
     }
+    dispatch(
+      createContactMessage(
+        {
+          fullname: values.fullname,
+          email: values.email,
+          message: values.message,
+        },
+        () => {
+          reset();
+          showToastSuccess('Success create data message');
+        },
+        () => {
+          showToastError('Failed to create messsage');
+        }
+      )
+    );
   };
 
   return (
@@ -121,14 +138,14 @@ const ContactScreen = () => {
               </p>
             )}
           </div>
-          <div className="relative w-full pb-5 mb-4">
+          <div className="relative w-full pb-5 mb-2">
             <textarea
               placeholder="Your message here"
               rows={4}
               name="message"
               {...register('message')}
               className={clsx(
-                'w-full px-5 py-3 border rounded outline-none border-gray50',
+                'w-full px-5 py-3 border rounded outline-none border-gray50 resize-none',
                 errors.message && 'border-2 border-red60'
               )}
             />
@@ -138,7 +155,7 @@ const ContactScreen = () => {
               </p>
             )}
           </div>
-          <div className="mb-5">
+          <div className="mb-10">
             {errors.capthca && (
               <p className="text-sm -bottom-0 text-red60">
                 {errors.capthca.message}

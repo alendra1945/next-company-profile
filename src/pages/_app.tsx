@@ -1,3 +1,4 @@
+import 'react-toastify/dist/ReactToastify.css';
 import 'src/styles/global.styles.css';
 import Head from 'next/head';
 import { Router } from 'next/dist/client/router';
