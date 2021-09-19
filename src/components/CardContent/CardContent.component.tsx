@@ -12,12 +12,7 @@ const CardContent: FC<CardContentInterface> = ({ children, image, title }) => {
           pageStyles.rounded30
         )}
       >
-        <img
-          src={image}
-          className="w-full h-auto"
-          alt="card-image"
-          layout="fill"
-        />
+        <img src={image} className="w-full h-auto" alt="card-image" />
       </div>
       <div className="order-1 w-full mb-10 sm:px-5 xl:pl-14 sm:w-8/12 sm:order-2 sm:mb-0">
         <p className={clsx('font-bold text-primary mb-4', pageStyles.title)}>
