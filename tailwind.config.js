@@ -30,12 +30,7 @@ module.exports = {
         full: '100%',
       },
       screens: {
-        xs: 'var(--xs-screen)',
-        sm: 'var(--sm-screen)',
-        md: 'var(--md-screen)',
-        lg: 'var(--lg-screen)',
-        xl: 'var(--xl-screen)',
-        '2xl': 'var(--xl2-screen)',
+        xs: '480px',
       },
     },
   },

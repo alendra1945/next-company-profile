@@ -1,8 +1,9 @@
 {
   "extends": [
-    "next/core-web-vitals",
-    "prettier",
-    "prettier/@typescript-eslint",
-    "prettier/react"
-  ]
+    "next",
+    "prettier"
+  ],
+  "rules": {
+    "@next/next/no-img-element": "off"
+  }
 }

@@ -1,0 +1,85 @@
+$navigationWidth_1: 200px;
+$navigationWidth_2: 150px;
+$navigationWidth_3: 120px;
+.bgCustom {
+  position: fixed;
+  width: 30%;
+  top: 0;
+  left: -50px;
+  z-index: -1;
+  @media (max-width: 1024px) {
+    width: 45%;
+  }
+  @media (max-width: 768px) {
+    width: 55%;
+  }
+  @media (max-width: 640px) {
+    width: 60%;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.containerNavigation {
+  position: sticky;
+  width: $navigationWidth_1;
+  bottom: 0;
+  right: 0;
+  top: 160px;
+  z-index: 2;
+  background: linear-gradient(
+    90deg,
+    rgba(119, 111, 196, 0.1) 17.11%,
+    rgba(119, 111, 196, 0) 93.66%
+  );
+  border-radius: 20px;
+  height: 500px;
+  @media (max-width: 1024px) {
+    width: $navigationWidth_2;
+  }
+  @media (max-width: 768px) {
+    width: $navigationWidth_3;
+  }
+  @media (max-width: 640px) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: unset;
+    width: 100%;
+    height: 140px;
+    background: unset;
+    background-color: #fff;
+    ::before {
+      border-radius: 20px;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(119, 111, 196, 0.01) 17.11%,
+        rgba(119, 111, 196, 0) 93.66%
+      );
+      z-index: -1;
+    }
+  }
+}
+
+.mainContent {
+  width: calc(100% - $navigationWidth_1 - 100px);
+  @media (max-width: 1024px) {
+    width: calc(100% - $navigationWidth_2 - 80px);
+  }
+  @media (max-width: 768px) {
+    width: calc(100% - $navigationWidth_3);
+  }
+  @media (max-width: 640px) {
+    width: 100%;
+  }
+}

@@ -1,3 +1,4 @@
+import 'src/styles/global.styles.css';
 import Head from 'next/head';
 import { Router } from 'next/dist/client/router';
 import NProgress from 'nprogress';
@@ -5,7 +6,6 @@ import enEN from 'src/lang/en-EN';
 import { IntlProvider } from 'react-intl';
 import { WrapComponent } from 'src/layout';
 import webConfig from 'src/config/web.config';
-import 'src/assets/styles/global.styles.css';
 import { Provider } from 'react-redux';
 import store from 'src/redux';
 NProgress.configure({
@@ -22,7 +22,6 @@ Router.events.on('routeChangeComplete', () => {
 Router.events.on('routeChangeError', () => {
   NProgress.done();
 });
-
 function App({ Component, pageProps }) {
   return (
     <>

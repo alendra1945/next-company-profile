@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { API_URL, NODE_ENV, PORT } = process.env;
+const { API_URL, GOOGLE_SITE_KEY_CAPTCHA } = process.env;
 module.exports = {
   async rewrites() {
     // if (NODE_ENV === "development") {
@@ -22,7 +22,6 @@ module.exports = {
     ];
   },
   env: {
-    NODE_ENV: NODE_ENV,
-    PORT,
+    GOOGLE_SITE_KEY_CAPTCHA,
   },
 };

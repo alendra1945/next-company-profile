@@ -9,8 +9,8 @@ export default {
   domain: 'localhost',
   facebookURL: 'facebook.com',
   twitterURL: 'twitter.com',
-  faviconImage: '/favicon.svg',
-  iconForFB: '/favicon.svg',
-  iconForTwitter: '/favicon.svg',
+  faviconImage: '/Vector.png',
+  iconForFB: '/Vector.png',
+  iconForTwitter: '/Vector.png',
   defaultLang: 'en',
 };
